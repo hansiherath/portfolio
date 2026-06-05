@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Mail } from 'lucide-react';
-import heroImage from '../assets/hero.jpg';
+import heroImage from '../assets/hero.png';
 import resumePdf from '../assets/Resume_of_Hansi_Herath.pdf';
 
 export default function Hero() {
