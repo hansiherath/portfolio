@@ -1,0 +1,159 @@
+/* src/index.css */
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --font-birthstone: "Birthstone", cursive;
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-base-100: var(--base-100);
+  --color-base-200: var(--base-200);
+  --color-base-300: var(--base-300);
+  --color-base-content: var(--base-content);
+  --color-base-content-muted: var(--base-content-muted);
+  --color-border-primary: var(--border-primary);
+}
+
+:root {
+  /* Default Dark theme variable values */
+  --primary: #8e24aa;
+  --primary-hover: #8e24aa;
+  --secondary: #0ea5e9;
+  --base-100: #090e1a;
+  --base-200: #111827;
+  --base-300: #1f2937;
+  --base-content: #f8fafc;
+  --base-content-muted: #94a3b8;
+  --border-primary: rgba(34, 197, 94, 0.2);
+}
+
+[data-theme="light"] {
+  /* Light theme variable values - Pink Theme */
+  --primary: #8e24aa;
+  --primary-hover: #8e24aa;
+  --secondary: #a855f7;
+  --base-100: #fbe5ea;
+  --base-200: #f2d2db;
+  --base-300: #e8bfcc;
+  --base-content: #310015;
+  --base-content-muted: #7e224e;
+  --border-primary: rgba(224, 64, 211, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--base-100);
+  color: var(--base-content);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--base-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+/* Custom Text Selection */
+::selection {
+  background-color: rgba(34, 197, 94, 0.3);
+  color: var(--base-content);
+}
+
+/* Keyframe animations */
+@keyframes border-beam {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.animate-border-beam {
+  animation: border-beam var(--duration, 8s) linear infinite;
+}
+
+/* Blinking terminal cursor */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Grid overlay background effect */
+.grid-bg {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+}
+
+/* Simplebar styled scrollable content classes */
+.custom-scroll-container {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.custom-scroll-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* Glow blur utilities */
+.glow-orb {
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+/* Environment effects animations */
+@keyframes pan-clouds {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-pan-clouds {
+  animation: pan-clouds 60s linear infinite;
+}
