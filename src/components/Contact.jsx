@@ -58,7 +58,7 @@ export default function Contact() {
       label: 'GitHub',
       value: 'hansi-herath',
       description: 'Check out my open source projects',
-      href: 'https://github.com/hansi-herath',
+      href: 'https://github.com/hansiherath',
     },
     {
       icon: LinkedinIcon,
