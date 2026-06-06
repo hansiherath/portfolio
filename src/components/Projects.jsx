@@ -33,7 +33,7 @@ export default function Projects() {
     },
     {
       title: 'LuminaSkin Website',
-      desc: 'Designed and developed a responsive website showcasing skincare products (02/2024 - 04/2024).',
+      desc: 'Designed and developed a responsive website showcasing skincare products.',
       tech: ['HTML', 'CSS', 'JavaScript'],
       liveLink: 'https://github.com/hansi-herath/luminaskin',
       mockType: 'web'

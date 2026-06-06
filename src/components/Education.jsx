@@ -1,13 +1,28 @@
 import { motion } from 'framer-motion';
-import { GraduationCap, ArrowUpRight } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 
 export default function Education() {
   const education = [
     {
-      degree: 'BSc in Information Technology (Honours)',
+      degree: 'BSc in Information Technology (General)',
       institution: 'Rajarata University of Sri Lanka',
       date: '2023 - 2026',
-      link: 'http://www.rjt.ac.lk/'
+      link: 'http://www.rjt.ac.lk/',
+      subjects: [
+        'Principles of Program Design & Programming',
+        'Object Oriented Programming',
+        'Data Structures',
+        'Database Systems',
+        'Web Technologies',
+        'Software Engineering',
+        'Project Management',
+        'Computer Networks',
+        'Computer Organization & Architecture',
+        'Information Systems Security',
+        'Introduction to Intelligence System',
+        'Introduction to Ethical Hacking',
+        'Embedded Systems'
+      ]
     },
     {
       degree: 'Diploma In English',
@@ -70,19 +85,20 @@ export default function Education() {
                   {edu.date}
                 </div>
               </div>
-              {edu.link && (
-                <div className="mt-3">
-                  <a
-                    href={edu.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-1 text-[11px] sm:text-xs text-base-content/60 hover:text-primary transition-colors font-mono"
-                  >
-                    [View Institution]
-                    <ArrowUpRight className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </a>
+              
+              {edu.subjects && (
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {edu.subjects.map((subject, sIdx) => (
+                    <span 
+                      key={sIdx} 
+                      className="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-md bg-primary/5 text-base-content/70 border border-primary/10 hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
+                    >
+                      {subject}
+                    </span>
+                  ))}
                 </div>
               )}
+
             </motion.div>
           ))}
         </div>

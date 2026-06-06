@@ -10,9 +10,9 @@ export default function Hero() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const roles = [
-    'IT Undergraduate',
-    'AI/ML Enthusiast',
-    'Cybersecurity Enthusiast'
+    'an IT Undergraduate',
+    'an AI/ML Enthusiast',
+    'a Cybersecurity Enthusiast'
   ];
 
   // Typewriter effect logic
@@ -108,7 +108,7 @@ export default function Hero() {
           </motion.span>
 
           <h1 className="text-3xl sm:text-4xl leading-tight mt-3 font-bold break-words text-base-content">
-            A <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">{roleText}</span>
+            I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">{roleText}</span>
             <span className="animate-blink text-primary">_</span>
           </h1>
 
