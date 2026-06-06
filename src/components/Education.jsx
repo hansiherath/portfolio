@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { GraduationCap } from 'lucide-react';
+import britishway from '../assets/logos/britishway.jfif';
+import rajarata from '../assets/logos/rajarata.jfif'
 
 export default function Education() {
   const education = [
@@ -8,6 +10,7 @@ export default function Education() {
       institution: 'Rajarata University of Sri Lanka',
       date: '2023 - 2026',
       link: 'http://www.rjt.ac.lk/',
+      logo: rajarata,
       subjects: [
         'Principles of Program Design & Programming',
         'Object Oriented Programming',
@@ -28,7 +31,8 @@ export default function Education() {
       degree: 'Diploma In English',
       institution: 'British Way English Academy',
       date: '2021 - 2021',
-      link: 'https://britishway.lk/'
+      link: 'https://britishway.lk/',
+      logo: britishway
     }
   ];
 
@@ -73,24 +77,31 @@ export default function Education() {
               className="bg-base-100/50 hover:bg-base-100 p-5 rounded-xl border border-primary/5 hover:border-primary/20 transition-all cursor-default relative overflow-hidden group"
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5">
-                <div>
-                  <h3 className="font-bold text-base text-base-content group-hover:text-primary transition-colors">
-                    {edu.degree}
-                  </h3>
-                  <p className="text-xs text-primary font-mono mt-0.5">
-                    {edu.institution}
-                  </p>
+                <div className="flex items-center gap-3">
+                  {edu.logo && (
+                    <div className="w-10 h-10 rounded-lg bg-white p-1 flex-shrink-0 flex items-center justify-center border border-primary/10">
+                      <img src={edu.logo} alt={edu.institution} className="w-full h-full object-contain" />
+                    </div>
+                  )}
+                  <div>
+                    <h3 className="font-bold text-base text-base-content group-hover:text-primary transition-colors">
+                      {edu.degree}
+                    </h3>
+                    <p className="text-xs text-primary font-mono mt-0.5">
+                      {edu.institution}
+                    </p>
+                  </div>
                 </div>
                 <div className="text-xs font-mono text-base-content/50 sm:text-right bg-base-300/40 px-2.5 py-1 rounded-md border border-primary/5 self-start sm:self-center">
                   {edu.date}
                 </div>
               </div>
-              
+
               {edu.subjects && (
                 <div className="mt-4 flex flex-wrap gap-1.5">
                   {edu.subjects.map((subject, sIdx) => (
-                    <span 
-                      key={sIdx} 
+                    <span
+                      key={sIdx}
                       className="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-md bg-primary/5 text-base-content/70 border border-primary/10 hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
                     >
                       {subject}
