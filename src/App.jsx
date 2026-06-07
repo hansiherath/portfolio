@@ -83,7 +83,7 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen text-base-content bg-base-100 font-sans relative overflow-x-hidden transition-colors duration-300 ${theme === 'light' ? 'grid-bg' : ''}`}>
+    <div className="min-h-screen text-base-content bg-base-100 font-sans relative overflow-x-hidden transition-colors duration-300">
       
       {/* Dynamic Galaxy Particle Canvas Background (Dark Mode Only) */}
       {theme !== 'light' && <GalaxyBackground />}

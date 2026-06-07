@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { Shield, Sparkles } from 'lucide-react';
+
 
 export default function Skills() {
   const skillCategories = [
@@ -87,7 +86,12 @@ export default function Skills() {
 
   return (
     <section id="skills" className="w-full max-w-3xl mx-auto py-16 px-4 font-sans select-none">
-      <div className="relative overflow-hidden rounded-2xl p-6 md:p-8 bg-base-200/80 border border-primary/30 backdrop-blur-md shadow-xl">
+      <div className="relative overflow-hidden rounded-2xl p-6 md:p-8 bg-base-200/80 border border-primary/30 backdrop-blur-md shadow-xl group/section hover:shadow-purple-500/20 transition-shadow duration-300">
+        
+        {/* Hover Border Beam Animation */}
+        <div className="pointer-events-none absolute inset-0 rounded-[inherit] border-2 border-transparent [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] [mask-composite:intersect] [mask-clip:padding-box,border-box] opacity-0 group-hover/section:opacity-100 transition-opacity duration-500 z-10">
+          <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent,transparent,#a855f7,#ff00ff,transparent,transparent)] animate-[spin_4s_linear_infinite]" />
+        </div>
         
         {/* Glow corner elements */}
         <div className="absolute -top-10 -right-10 hidden md:block w-36 h-36 border border-primary/20 rounded-full opacity-35" />

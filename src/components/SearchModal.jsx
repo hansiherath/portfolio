@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Code2, GraduationCap, Briefcase, Sparkles, Award } from 'lucide-react';
+import { Search, X, Code2, GraduationCap, Sparkles, Award } from 'lucide-react';
 
 const searchData = [
   { type: 'Skill', name: 'Python', desc: 'Programming Language', section: 'skills', icon: Sparkles },
@@ -11,6 +11,9 @@ const searchData = [
   { type: 'Skill', name: 'Java', desc: 'Object-oriented application building', section: 'skills', icon: Sparkles },
   { type: 'Skill', name: 'Flutter', desc: 'Mobile UI application framework', section: 'skills', icon: Sparkles },
   
+  { type: 'Project', name: 'Vulnerability Scanning with Nessus', desc: 'Vulnerability assessment on test systems to identify security weaknesses.', section: 'projects', icon: Code2 },
+  { type: 'Project', name: 'Network Traffic Analysis using Wireshark', desc: 'Network packet analysis and protocol inspection using Wireshark.', section: 'projects', icon: Code2 },
+  { type: 'Project', name: 'Web Application Vulnerability Assessment', desc: 'Security assessment on a test web application.', section: 'projects', icon: Code2 },
   { type: 'Project', name: 'AI IoT Ripeness Detection', desc: 'Mango ripeness detection using ML, E-Nose, and NIR sensors.', section: 'projects', icon: Code2 },
   { type: 'Project', name: 'Diabetes Risk Prediction', desc: 'ML model to classify diabetes and non-diabetes cases.', section: 'projects', icon: Code2 },
   { type: 'Project', name: 'Fungal Colony Detection', desc: 'Computer vision model to detect and classify fungi colonies.', section: 'projects', icon: Code2 },
@@ -20,6 +23,13 @@ const searchData = [
   { type: 'Education', name: 'BSc in Information Technology', desc: 'Rajarata University of Sri Lanka (2023 - 2026)', section: 'education', icon: GraduationCap },
   { type: 'Education', name: 'Diploma In English', desc: 'British Way English Academy (2021)', section: 'education', icon: GraduationCap },
   
+  { type: 'Certification', name: 'Ethical Penetration Testing', desc: 'Coursera - 2026', section: 'certifications', icon: Award },
+  { type: 'Certification', name: 'CC Domain 1: Security Principles', desc: 'ISC2 - 2026', section: 'certifications', icon: Award },
+  { type: 'Certification', name: 'CC Domain 2: Incident Response, BC and DR', desc: 'ISC2 - 2026', section: 'certifications', icon: Award },
+  { type: 'Certification', name: 'CC Domain 3: Access Control Concepts', desc: 'ISC2 - 2026', section: 'certifications', icon: Award },
+  { type: 'Certification', name: 'CC Domain 4: Network Security', desc: 'ISC2 - 2026', section: 'certifications', icon: Award },
+  { type: 'Certification', name: 'CC Domain 5: Security Operations', desc: 'ISC2 - 2026', section: 'certifications', icon: Award },
+  { type: 'Certification', name: 'CC Course Pre-assessment', desc: 'ISC2 - 2026', section: 'certifications', icon: Award },
   { type: 'Certification', name: 'Python for Beginners', desc: 'University of Moratuwa - 2023', section: 'certifications', icon: Award },
   { type: 'Certification', name: 'Wireshark for Security: Detect Network Anomalies', desc: 'Coursera - 2024', section: 'certifications', icon: Award },
   { type: 'Certification', name: 'Introduction to Cybersecurity', desc: 'Cisco - 2024', section: 'certifications', icon: Award },

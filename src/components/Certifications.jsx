@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 import linuxLogo from '../assets/logos/linuxfoundation.png';
 import courseraLogo from '../assets/logos/coursera.png';
@@ -9,14 +9,97 @@ import linkedinLogo from '../assets/logos/linkedin.png';
 import postmanLogo from '../assets/logos/postman.svg';
 import ciscoLogo from '../assets/logos/cisco.svg';
 import uomLogo from '../assets/logos/uom.png';
+import isc2Logo from '../assets/logos/isc2.png';
+
+import ccPreAssessmentPdf from '../assets/certificates/CC  Course Pre-assessment.pdf';
+import ccDomain1Pdf from '../assets/certificates/CC Domain 1 Security Principles.pdf';
+import ccDomain2Pdf from '../assets/certificates/CC Domain 2 Incident Response, Business Continuity and.pdf';
+import ccDomain3Pdf from '../assets/certificates/CC Domain 3 Access Control Concepts.pdf';
+import ccDomain4Pdf from '../assets/certificates/CC Domain 4 Network Security.pdf';
+import ccDomain5Pdf from '../assets/certificates/CC Domain 5 Security Operations.pdf';
+import ethicalPenetrationTestingPdf from '../assets/certificates/Ethical Penetration Testing.pdf';
+import Kubernetes from '../assets/certificates/Introduction to Kubernetes LFS158.jfif';
+import AIML from '../assets/certificates/AIML.png';
+import postman from '../assets/certificates/postman.jfif';
 
 export default function Certifications() {
   const certifications = [
+    {
+      title: 'Ethical Penetration Testing',
+      issuer: 'Coursera',
+      date: '2026',
+      description: 'Metasploit for Beginners: Ethical Penetration Testing project certificate.',
+      link: ethicalPenetrationTestingPdf,
+      linkText: 'View Certificate',
+      icon: courseraLogo,
+      isImage: true
+    },
+    {
+      title: 'CC Domain 5: Security Operations',
+      issuer: 'ISC2',
+      date: '2026',
+      description: 'Certified in Cybersecurity (CC) Domain 5 completion certificate.',
+      link: ccDomain5Pdf,
+      linkText: 'View Certificate',
+      icon: isc2Logo,
+      isImage: true
+    },
+    {
+      title: 'CC Domain 4: Network Security',
+      issuer: 'ISC2',
+      date: '2026',
+      description: 'Certified in Cybersecurity (CC) Domain 4 completion certificate.',
+      link: ccDomain4Pdf,
+      linkText: 'View Certificate',
+      icon: isc2Logo,
+      isImage: true
+    },
+    {
+      title: 'CC Domain 3: Access Control Concepts',
+      issuer: 'ISC2',
+      date: '2026',
+      description: 'Certified in Cybersecurity (CC) Domain 3 completion certificate.',
+      link: ccDomain3Pdf,
+      linkText: 'View Certificate',
+      icon: isc2Logo,
+      isImage: true
+    },
+    {
+      title: 'CC Domain 2: Incident Response, BC and DR',
+      issuer: 'ISC2',
+      date: '2026',
+      description: 'Certified in Cybersecurity (CC) Domain 2 completion certificate.',
+      link: ccDomain2Pdf,
+      linkText: 'View Certificate',
+      icon: isc2Logo,
+      isImage: true
+    },
+    {
+      title: 'CC Domain 1: Security Principles',
+      issuer: 'ISC2',
+      date: '2026',
+      description: 'Certified in Cybersecurity (CC) Domain 1 completion certificate.',
+      link: ccDomain1Pdf,
+      linkText: 'View Certificate',
+      icon: isc2Logo,
+      isImage: true
+    },
+    {
+      title: 'CC Course Pre-assessment',
+      issuer: 'ISC2',
+      date: '2026',
+      description: 'Certified in Cybersecurity (CC) Pre-assessment completion certificate.',
+      link: ccPreAssessmentPdf,
+      linkText: 'View Certificate',
+      icon: isc2Logo,
+      isImage: true
+    },
     {
       title: 'Introduction to Kubernetes (LFS158)',
       issuer: 'The Linux Foundation',
       date: '2026',
       description: 'Learned core concepts of Kubernetes including container orchestration, architecture, deployment, and scaling of containerized applications.',
+      link: Kubernetes,
       linkText: 'View Certificate',
       icon: linuxLogo,
       isImage: true
@@ -36,6 +119,7 @@ export default function Certifications() {
       issuer: 'SLIIT',
       date: '2026',
       description: 'Covered essential machine learning workflows, data cleansing, regression, clustering models, and practical AI application pipelines.',
+      link: AIML,
       linkText: 'View Certificate',
       icon: sliitLogo,
       isImage: true
@@ -55,6 +139,7 @@ export default function Certifications() {
       issuer: 'Postman',
       date: '2025',
       description: 'Validated mastery of executing API requests, testing parameters, variable chaining, mock servers, and automated suite assertions.',
+      link: postman,
       linkText: 'View Certificate',
       icon: postmanLogo,
       isImage: true
@@ -88,18 +173,11 @@ export default function Certifications() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative overflow-hidden border border-primary/30 bg-base-200/80 rounded-2xl p-6 md:p-8 backdrop-blur-md shadow-2xl"
+        className="group/section relative overflow-hidden border border-primary/30 bg-base-200/80 rounded-2xl p-6 md:p-8 backdrop-blur-md shadow-2xl hover:shadow-purple-500/20 transition-shadow duration-300"
       >
-        {/* Border Beam Animation */}
-        <div className="pointer-events-none absolute inset-0 rounded-[inherit] border border-transparent [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] [mask-composite:intersect] [mask-clip:padding-box,border-box]">
-          <div
-            className="absolute aspect-square bg-gradient-to-l from-primary via-secondary to-transparent w-[120px] animate-border-beam"
-            style={{
-              offsetPath: 'rect(0% 100% 100% 0% round 16px)',
-              transform: 'translate(-50%, -50%)',
-              '--duration': '10s'
-            }}
-          />
+        {/* Hover Border Beam Animation */}
+        <div className="pointer-events-none absolute inset-0 rounded-[inherit] border-2 border-transparent [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] [mask-composite:intersect] [mask-clip:padding-box,border-box] opacity-0 group-hover/section:opacity-100 transition-opacity duration-500 z-10">
+          <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent,transparent,#a855f7,#ff00ff,transparent,transparent)] animate-[spin_4s_linear_infinite]" />
         </div>
 
         {/* Section Header */}
@@ -110,7 +188,6 @@ export default function Certifications() {
               Certifications & <span className="text-base-content/50">Licenses</span>
             </h2>
           </div>
-          <Award className="w-6 h-6 text-primary/70 animate-pulse" />
         </div>
 
         {/* Certifications List */}
@@ -128,12 +205,12 @@ export default function Certifications() {
                     <div className="flex gap-2">
                       {cert.icons ? (
                         cert.icons.map((icn, i) => (
-                          <div key={i} className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-base-100 transition-colors duration-300 flex items-center justify-center">
+                          <div key={i} className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/30 transition-colors duration-300 flex items-center justify-center">
                             <img src={icn} alt="issuer logo" className="w-5 h-5 object-contain" />
                           </div>
                         ))
                       ) : (
-                        <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-base-100 transition-colors duration-300 flex items-center justify-center">
+                        <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/30 transition-colors duration-300 flex items-center justify-center">
                           {cert.isImage ? (
                             <img src={cert.icon} alt="issuer logo" className="w-5 h-5 object-contain" />
                           ) : (

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { GraduationCap } from 'lucide-react';
+
 import britishway from '../assets/logos/britishway.jfif';
 import rajarata from '../assets/logos/rajarata.jfif'
 
@@ -43,18 +43,11 @@ export default function Education() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative overflow-hidden border border-primary/30 bg-base-200/80 rounded-2xl p-6 md:p-8 backdrop-blur-md shadow-2xl"
+        className="group/section relative overflow-hidden border border-primary/30 bg-base-200/80 rounded-2xl p-6 md:p-8 backdrop-blur-md shadow-2xl hover:shadow-purple-500/20 transition-shadow duration-300"
       >
-        {/* Border Beam Animation */}
-        <div className="pointer-events-none absolute inset-0 rounded-[inherit] border border-transparent [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] [mask-composite:intersect] [mask-clip:padding-box,border-box]">
-          <div
-            className="absolute aspect-square bg-gradient-to-l from-primary via-secondary to-transparent w-[120px] animate-border-beam"
-            style={{
-              offsetPath: 'rect(0% 100% 100% 0% round 16px)',
-              transform: 'translate(-50%, -50%)',
-              '--duration': '10s'
-            }}
-          />
+        {/* Hover Border Beam Animation */}
+        <div className="pointer-events-none absolute inset-0 rounded-[inherit] border-2 border-transparent [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] [mask-composite:intersect] [mask-clip:padding-box,border-box] opacity-0 group-hover/section:opacity-100 transition-opacity duration-500 z-10">
+          <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent,transparent,#a855f7,#ff00ff,transparent,transparent)] animate-[spin_4s_linear_infinite]" />
         </div>
 
         {/* Section Header */}
@@ -65,7 +58,6 @@ export default function Education() {
               Education <span className="text-base-content/50">Background</span>
             </h2>
           </div>
-          <GraduationCap className="w-6 h-6 text-primary/70" />
         </div>
 
         {/* Education List */}

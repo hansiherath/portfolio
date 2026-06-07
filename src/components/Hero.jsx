@@ -53,18 +53,11 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="border border-primary/30 bg-base-200/80 backdrop-blur-md relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center w-full rounded-2xl p-6 md:p-8 gap-6 shadow-2xl transition-shadow duration-300"
+        className="group/section border border-primary/30 bg-base-200/80 backdrop-blur-md relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center w-full rounded-2xl p-6 md:p-8 gap-6 shadow-2xl transition-shadow duration-300 hover:shadow-purple-500/20"
       >
-        {/* Border Beam Animation */}
-        <div className="pointer-events-none absolute inset-0 rounded-[inherit] border border-transparent [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] [mask-composite:intersect] [mask-clip:padding-box,border-box]">
-          <div
-            className="absolute aspect-square bg-gradient-to-l from-primary via-secondary to-transparent w-[120px] animate-border-beam"
-            style={{
-              offsetPath: 'rect(0% 100% 100% 0% round 16px)',
-              transform: 'translate(-50%, -50%)',
-              '--duration': '8s'
-            }}
-          />
+        {/* Hover Border Beam Animation */}
+        <div className="pointer-events-none absolute inset-0 rounded-[inherit] border-2 border-transparent [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] [mask-composite:intersect] [mask-clip:padding-box,border-box] opacity-0 group-hover/section:opacity-100 transition-opacity duration-500 z-10">
+          <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent,transparent,#a855f7,#ff00ff,transparent,transparent)] animate-[spin_4s_linear_infinite]" />
         </div>
 
         {/* Right side: Profile Picture & Signature (Placed first on mobile, handled by flex/grid order) */}
@@ -113,11 +106,13 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 text-sm sm:text-base text-base-content/70 leading-relaxed font-normal">
-            I build secure, intelligent systems and full-stack web applications using{' '}
-            <span className="bg-primary/10 text-primary font-medium px-1.5 py-0.5 rounded border border-primary/20">Python</span>,{' '}
-            <span className="bg-primary/10 text-primary font-medium px-1.5 py-0.5 rounded border border-primary/20">React & IoT</span>, and{' '}
-            <span className="bg-primary/10 text-primary font-medium px-1.5 py-0.5 rounded border border-primary/20">ML</span>,
-            focusing on secure development practices, smart sensing, and clean user experience architectures.
+            IT undergraduate with a strong focus on{' '}
+            <span className="bg-primary/10 text-primary font-medium px-1.5 py-0.5 rounded border border-primary/20">Cybersecurity</span>{' '}
+            and{' '}
+            <span className="bg-primary/10 text-primary font-medium px-1.5 py-0.5 rounded border border-primary/20">Ethical Hacking</span>. 
+            Experienced in network and web application security using tools like{' '}
+            <span className="bg-primary/10 text-primary font-medium px-1.5 py-0.5 rounded border border-primary/20">Wireshark, Nessus & Metasploit</span>. 
+            Passionate about threat detection, vulnerability management, and building secure system architectures.
           </p>
 
           {/* Action Links */}

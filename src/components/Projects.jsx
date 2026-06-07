@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Eye } from 'lucide-react';
+
 import mango from '../assets/projects/mango.jfif';
 import diabets from '../assets/projects/diabets.jfif';
 import fungi from '../assets/projects/fungi.jfif';
 import note from '../assets/projects/note.jfif';
 import lumin from '../assets/projects/lumin.jfif';
+import vulner from '../assets/projects/vulner.jfif';
+import wireshark from '../assets/projects/wireshark.jfif';
+import web from '../assets/projects/web.jfif';
 
 export default function Projects() {
   // To add custom banners:
@@ -37,6 +40,30 @@ export default function Projects() {
       banner: fungi
     },
     {
+      title: 'Vulnerability Scanning with Nessus',
+      desc: 'Conducted vulnerability assessment on test systems using Nessus to identify security weaknesses and analyze remediation recommendations.',
+      tech: ['Nessus', 'Vulnerability Assessment'],
+      liveLink: '#',
+      mockType: 'security',
+      banner: vulner
+    },
+    {
+      title: 'Network Traffic Analysis using Wireshark',
+      desc: 'Captured and analyzed network packets to inspect protocols, traffic behavior, and suspicious communication patterns using Wireshark.',
+      tech: ['Wireshark', 'Network Security'],
+      liveLink: '#',
+      mockType: 'security',
+      banner: wireshark
+    },
+    {
+      title: 'Web Application Vulnerability Assessment',
+      desc: 'Performed security assessment on a test web application to identify common vulnerabilities using vulnerability scanning and manual testing techniques.',
+      tech: ['Web Security', 'Manual Testing'],
+      liveLink: '#',
+      mockType: 'security',
+      banner: web
+    },
+    {
       title: 'Design Text Editor',
       desc: 'Feature-rich GUI text editor built with desktop-class widgets, supporting formatting, syntax styling, and files.',
       tech: ['C++', 'Qt Framework', 'CMake'],
@@ -56,7 +83,11 @@ export default function Projects() {
 
   return (
     <section id="projects" className="w-full max-w-3xl mx-auto py-16 px-4 font-sans select-none">
-      <div className="relative overflow-hidden border border-primary/30 bg-base-200/80 rounded-2xl p-6 md:p-8 backdrop-blur-md shadow-xl">
+      <div className="relative overflow-hidden border border-primary/30 bg-base-200/80 rounded-2xl p-6 md:p-8 backdrop-blur-md shadow-xl group/section hover:shadow-purple-500/20 transition-shadow duration-300">
+        {/* Hover Border Beam Animation */}
+        <div className="pointer-events-none absolute inset-0 rounded-[inherit] border-2 border-transparent [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)] [mask-composite:intersect] [mask-clip:padding-box,border-box] opacity-0 group-hover/section:opacity-100 transition-opacity duration-500 z-10">
+          <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent,transparent,#a855f7,#ff00ff,transparent,transparent)] animate-[spin_4s_linear_infinite]" />
+        </div>
 
         {/* Section Header */}
         <div className="text-start mb-8">
@@ -182,6 +213,23 @@ export default function Projects() {
                             <div className="h-5 w-8 bg-primary/20 rounded border border-primary/15" />
                             <div className="h-5 w-8 bg-primary/20 rounded border border-primary/15" />
                             <div className="h-5 w-8 bg-primary/20 rounded border border-primary/15" />
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {proj.mockType === 'security' && (
+                      <div className="w-full h-full p-2 flex flex-col justify-between font-mono text-[9px] text-green-400 bg-black/40">
+                        <div className="flex justify-between border-b border-green-500/20 pb-1">
+                          <span>SYS_SCAN: {proj.title.substring(0, 10).toUpperCase()}...</span>
+                          <span className="text-green-400 animate-pulse">● SECURE</span>
+                        </div>
+                        <div className="flex-1 relative mt-1 rounded border border-green-500/10 overflow-hidden bg-black/60 p-1.5 flex flex-col gap-1">
+                          <div className="text-[7px] text-green-500/70">{">"} Initiating scan sequence...</div>
+                          <div className="text-[7px] text-green-500/70">{">"} Analyzing vulnerabilities...</div>
+                          <div className="text-[7px] text-green-400">{">"} Status: 0 Critical, 2 Low</div>
+                          <div className="mt-auto h-[2px] bg-green-500/20 w-full overflow-hidden">
+                            <div className="h-full bg-green-500 w-2/3 animate-pulse"></div>
                           </div>
                         </div>
                       </div>
