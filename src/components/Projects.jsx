@@ -16,17 +16,17 @@ export default function Projects() {
   // 3. Set the `banner` field below to the imported image (e.g., `banner: mangoBanner`)
   const projects = [
     {
-      title: 'AI IoT Ripeness Detection',
-      desc: 'Non-destructive mango ripeness detection system integrating Machine Learning, Electronic Nose, and NIR sensors.',
-      tech: ['Python', 'IoT', 'Scikit-Learn'],
+      title: 'AI-Based IoT System for Ripeness-Detection in Brown Bagged TomEJC-Mangoes',
+      desc: 'Developed a non-destructive, AI-powered IoT system that integrates NIR spectroscopy, Electronic Nose sensing, firmness and weight analysis, and machine learning to assess mango quality. The system predicts ripeness, sugar content, optimal consumption time, and personalized health recommendations in real time through a mobile application.',
+      tech: ['Flutter ', 'Python', 'ESP32', 'Machine Learning', 'Scikit-Learn', 'MySQL', 'AWS'],
       liveLink: 'https://github.com/hansi-herath/mango-ripeness',
       mockType: 'sensor',
       banner: mango
     },
     {
       title: 'Diabetes Risk Prediction',
-      desc: 'Supervised ML classification system that predicts diabetes risk using lifestyle factors, metrics, and dietary habits.',
-      tech: ['Python', 'Google Colab', 'Pandas'],
+      desc: 'Built a machine learning–based diabetes risk prediction system that analyzes health, lifestyle, and dietary data to assess diabetes risk. Applied data preprocessing, feature engineering, SMOTE balancing, and model optimization to improve model performance.',
+      tech: ['Python', 'OpenCV', 'NumPy', 'Image Processing'],
       liveLink: 'https://github.com/hansi-herath/diabetes-prediction',
       mockType: 'chart',
       banner: diabets
@@ -65,7 +65,7 @@ export default function Projects() {
     },
     {
       title: 'Design Text Editor',
-      desc: 'Feature-rich GUI text editor built with desktop-class widgets, supporting formatting, syntax styling, and files.',
+      desc: 'Created a Qt-based desktop text editor with file handling, undo/redo functionality, and automatic sentence capitalization features.',
       tech: ['C++', 'Qt Framework', 'CMake'],
       liveLink: 'https://github.com/hansi-herath/qt-text-editor',
       mockType: 'code',
@@ -73,7 +73,7 @@ export default function Projects() {
     },
     {
       title: 'LuminaSkin Website',
-      desc: 'Designed and developed a responsive website showcasing skincare products.',
+      desc: 'Built a responsive skincare product showcase website with modern UI design, product presentation pages, and cross-device compatibility.',
       tech: ['HTML', 'CSS', 'JavaScript'],
       liveLink: 'https://github.com/hansi-herath/luminaskin',
       mockType: 'web',
