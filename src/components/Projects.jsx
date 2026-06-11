@@ -19,7 +19,7 @@ export default function Projects() {
       title: 'AI-Based IoT System for Ripeness-Detection in Brown Bagged TomEJC-Mangoes',
       desc: 'Developed a non-destructive, AI-powered IoT system that integrates NIR spectroscopy, Electronic Nose sensing, firmness and weight analysis, and machine learning to assess mango quality. The system predicts ripeness, sugar content, optimal consumption time, and personalized health recommendations in real time through a mobile application.',
       tech: ['Flutter ', 'Python', 'ESP32', 'Machine Learning', 'Scikit-Learn', 'MySQL', 'AWS'],
-      liveLink: 'https://github.com/hansi-herath/mango-ripeness',
+      liveLink: 'https://github.com/hansiherath/AI-Based-IoT-System-for-Non-Destructive-Ripeness-Detection-in-Brown-Bagged-TomEJC-Mangoes',
       mockType: 'sensor',
       banner: mango
     },
@@ -27,7 +27,7 @@ export default function Projects() {
       title: 'Diabetes Risk Prediction',
       desc: 'Built a machine learning–based diabetes risk prediction system that analyzes health, lifestyle, and dietary data to assess diabetes risk. Applied data preprocessing, feature engineering, SMOTE balancing, and model optimization to improve model performance.',
       tech: ['Python', 'OpenCV', 'NumPy', 'Image Processing'],
-      liveLink: 'https://github.com/hansi-herath/diabetes-prediction',
+      liveLink: 'https://github.com/hansiherath/Diabetes-Risk-Prediction-Using-Deep-Learning',
       mockType: 'chart',
       banner: diabets
     },
@@ -35,7 +35,7 @@ export default function Projects() {
       title: 'Fungal Colony Detection',
       desc: 'Computer vision model designed to automatically locate, segment, and classify fungal colonies from petri dish imagery.',
       tech: ['Python', 'OpenCV', 'PyTorch'],
-      liveLink: 'https://github.com/hansi-herath/fungal-cv',
+      liveLink: 'https://github.com/hansiherath/Fungal-Colony-Detection-and-Growth-Analysis',
       mockType: 'cv',
       banner: fungi
     },
@@ -67,7 +67,7 @@ export default function Projects() {
       title: 'Design Text Editor',
       desc: 'Created a Qt-based desktop text editor with file handling, undo/redo functionality, and automatic sentence capitalization features.',
       tech: ['C++', 'Qt Framework', 'CMake'],
-      liveLink: 'https://github.com/hansi-herath/qt-text-editor',
+      liveLink: 'https://github.com/hansiherath/Desktop-Text-Editor-with-Auto-Correction',
       mockType: 'code',
       banner: note
     },
@@ -75,7 +75,7 @@ export default function Projects() {
       title: 'LuminaSkin Website',
       desc: 'Built a responsive skincare product showcase website with modern UI design, product presentation pages, and cross-device compatibility.',
       tech: ['HTML', 'CSS', 'JavaScript'],
-      liveLink: 'https://github.com/hansi-herath/luminaskin',
+      liveLink: 'https://github.com/hansiherath/Luminaskin',
       mockType: 'web',
       banner: lumin
     }
@@ -263,20 +263,19 @@ export default function Projects() {
                 </div>
 
                 {/* Card footer links */}
-                <div className="flex items-center justify-between text-xs sm:text-sm pt-2 border-t border-primary/5">
-                  <a
-                    href={proj.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline-offset-6 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 hover:text-primary transition-transform duration-300 hover:translate-x-0.5 text-base-content/80"
-                  >
-                  </a>
-                  <button
-                    onClick={() => window.open(proj.liveLink, '_blank')}
-                    className="underline-offset-6 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 hover:text-primary bg-transparent border-none p-0 cursor-pointer transition-transform duration-300 hover:translate-x-0.5 text-base-content/80"
-                  >
-                  </button>
-                </div>
+                {proj.liveLink !== '#' && (
+                  <div className="flex items-center justify-between text-xs sm:text-sm pt-2 border-t border-primary/5">
+                    <a
+                      href={proj.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline-offset-6 decoration-dashed hover:underline rounded-lg inline-flex items-center gap-1 hover:text-primary transition-transform duration-300 hover:translate-x-0.5 text-base-content/80"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                      GitHub Repo
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
